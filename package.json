@@ -1,0 +1,23 @@
+{
+  "name": "advent_of_code_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"tsc --project ./ && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zterhes/advent_of_code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zterhes/advent_of_code/issues"
+  },
+  "homepage": "https://github.com/zterhes/advent_of_code#readme",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
+}

@@ -4,7 +4,7 @@ let prevMeasurement: number;
 let solution: number = 0;
 let actualNumber: number;
 
-let buffer = myFileReader("inputs/input_1");
+let buffer = myFileReader("inputs/input_day1_1");
 let data = buffer.split("\n");
 
 prevMeasurement = parseInt(data[0], 10);

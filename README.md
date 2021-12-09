@@ -1,2 +1,2 @@
 # Advent of Code 2021
-to start ts: npm start
+to start typeScript project: npm start

@@ -1,4 +1,4 @@
-import { myFileReader } from "../inputs/FileReader";
+import { myFileReader } from "../../inputs/FileReader";
 
 let prevMeasurement: number;
 let solution: number = 0;

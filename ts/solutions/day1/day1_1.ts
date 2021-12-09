@@ -1,11 +1,10 @@
-import { myFileReader } from "../../inputs/FileReader";
+import { getDataFromFileInStringArray } from "../../inputs/FileReader";
 
 let prevMeasurement: number;
 let solution: number = 0;
 let actualNumber: number;
 
-let buffer = myFileReader("inputs/input_day1_1");
-let data = buffer.split("\n");
+let data = getDataFromFileInStringArray("inputs/input_day1_1");
 
 prevMeasurement = parseInt(data[0], 10);
 data.forEach((number) => {

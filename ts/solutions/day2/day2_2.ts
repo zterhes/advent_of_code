@@ -1,11 +1,11 @@
+import { Submarine, Command, DIRECTION, Position } from "./Submarine";
 import { getDataFromFileInStringArray } from "../../inputs/FileReader";
-import { Command, DIRECTION, Position } from "./Submarine";
 
-let solution: number = 0;
+const submarine = new Submarine();
 
-let data: String[] = getDataFromFileInStringArray("inputs/input_day2_1");
+console.log(`submarine`, submarine);
 
-let actualCoordinates: Position = { x: 0, y: 0 };
+let data: string[] = getDataFromFileInStringArray("inputs/input_day2_2");
 
 const getDirection = (input: string): DIRECTION => {
   if (Object.values(DIRECTION).includes(input as DIRECTION)) {
@@ -26,11 +26,17 @@ data.forEach((commandString) => {
     direction: directionStr,
     coordinates: parseInt(commandArr[1]),
   };
-  if (command.direction === DIRECTION.FORWARD)
-    actualCoordinates.y += command.coordinates;
-  if (command.direction === DIRECTION.UP)
-    actualCoordinates.x -= command.coordinates;
-  if (command.direction === DIRECTION.DOWN)
-    actualCoordinates.x += command.coordinates;
+  if (command.direction === DIRECTION.FORWARD) {
+      submarine.changeY(command.coordinates)
+  }
+  if (command.direction === DIRECTION.DOWN) {
+    submarine.changeAim(command.coordinates);
+  }
+  if (command.direction === DIRECTION.UP) {
+    submarine.changeAim(command.coordinates * -1);
+  }
 });
-export default solution = actualCoordinates.x * actualCoordinates.y;
+
+console.log(`submarine`, submarine)
+
+export default submarine.getX() * submarine.getY();
